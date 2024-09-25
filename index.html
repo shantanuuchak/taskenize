@@ -7,7 +7,9 @@
     <title>Taskey &mdash; Your Personal Tasks Manager</title>
     <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
   </head>
-  <body>
+  <body
+    class="background: linear-gradient(109.6deg, rgb(36, 45, 57) 11.2%, rgb(16, 37, 60) 51.2%, rgb(0, 0, 0) 98.6%);"
+  >
     <!-- Header -->
     <div class="navbar bg-base-100 px-6">
       <div class="flex-1">
@@ -38,7 +40,7 @@
       </div>
     </div>
 
-    <main class="container h-screen flex justify-center items-center">
+    <main class="h-screen flex justify-center items-center">
       <div
         class="card text-black w-96 shadow-xl"
         style="
@@ -50,8 +52,23 @@
         "
       >
         <div class="card-body">
-          <h2 class="card-title">Shoes!</h2>
-          <p>If a dog chews shoes whose shoes does he choose?</p>
+          <h2 class="card-title text-4xl pb-3">Taskey</h2>
+          <label class="input input-bordered flex items-center gap-2">
+            <input type="text" class="grow text-white" placeholder="Search" />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 16 16"
+              fill="currentColor"
+              class="h-4 w-4 opacity-100 text-white cursor-pointer"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </label>
+
           <div class="card-actions justify-end">
             <button class="btn btn-primary">Buy Now</button>
           </div>
