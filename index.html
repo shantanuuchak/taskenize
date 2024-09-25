@@ -7,6 +7,58 @@
     <title>Taskey &mdash; Your Personal Tasks Manager</title>
   </head>
   <body>
+    <!-- Header -->
+    <div class="navbar bg-base-100 px-6">
+      <div class="flex-1">
+        <a class="btn btn-ghost text-xl">Taskey</a>
+      </div>
+      <div class="flex-none">
+        <ul class="menu menu-horizontal px-1">
+          <li>
+            <details>
+              <summary>Links</summary>
+              <ul class="bg-base-100 rounded-t-none p-2">
+                <li>
+                  <a href="https://shantanuuchak.tech" target="_blank"
+                    >Author</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://github.com/shantanuuchak/taskey"
+                    target="_blank"
+                    >GitHub</a
+                  >
+                </li>
+              </ul>
+            </details>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <main class="container h-screen flex justify-center items-center">
+      <div
+        class="card text-black w-96 shadow-xl"
+        style="
+          background: radial-gradient(
+            circle at 18.7% 37.8%,
+            rgb(250, 250, 250) 0%,
+            rgb(225, 234, 238) 90%
+          );
+        "
+      >
+        <div class="card-body">
+          <h2 class="card-title">Shoes!</h2>
+          <p>If a dog chews shoes whose shoes does he choose?</p>
+          <div class="card-actions justify-end">
+            <button class="btn btn-primary">Buy Now</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Script -->
     <script type="module" src="/main.js"></script>
   </body>
 </html>
