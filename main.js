@@ -25,8 +25,11 @@ function saveToLocal() {
   localStorage.setItem("items", JSON.stringify(tasks));
 }
 
-function renderTask(task) {
+function renderTask(task, empty = false) {
   // Take a task object and render it on the screen as a list
+  if (empty) {
+    dataList.innerHTML = "";
+  }
   dataList.appendChild(TaskList(task));
 }
 
@@ -39,6 +42,17 @@ function handleInput() {
 
   if (tasks.length > 6) {
     Toast("Maximum length reached");
+    inputEl.value = "";
+    return;
+  }
+
+  // Add easter egg 🥚
+  if (currValue === ":clearall") {
+    tasks.length = 0;
+    saveToLocal();
+    inputEl.value = "";
+    Toast("Cleared everything");
+    renderTask("", true);
     return;
   }
 
