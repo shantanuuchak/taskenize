@@ -37,6 +37,7 @@
               stroke-linecap="round"
               stroke-linejoin="round"
               class="icon icon-tabler icons-tabler-outline icon-tabler-plus"
+              data-add-btn
             >
               <path stroke="none" d="M0 0h24v24H0z" fill="none" />
               <path d="M12 5l0 14" />
@@ -46,7 +47,10 @@
 
           <!-- Show todos -->
           <div class="card-actions">
-            <ul class="menu bg-base-200 rounded-box w-full text-white">
+            <ul
+              class="menu bg-base-200 rounded-box w-full text-white"
+              data-list-tasks
+            >
               <li class="flex flex-row items-center">
                 <p>Task Item #1</p>
                 <button class="btn">
