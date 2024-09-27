@@ -3,7 +3,7 @@ export default function (title) {
   liEl.classList.add("flex", "flex-row", "items-center");
 
   liEl.innerHTML = `
-    <p>Placeholder task #1</p>
+    <p>${title}</p>
     <button class="btn">
       <svg
         xmlns="http://www.w3.org/2000/svg"

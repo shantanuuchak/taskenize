@@ -10,10 +10,16 @@ const dataList = document.querySelector("[data-list-tasks]");
 
 // === Variables ===
 // Get tasks from local storage
-const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+const tasks = JSON.parse(localStorage.getItem("items")) || [];
+
+console.log("Page render");
+console.log(tasks);
 
 // Render tasks on Initial Load
-tasks.forEach(renderTask);
+tasks.forEach((task) => {
+  console.log(task.text);
+  renderTask(task.text);
+});
 
 function saveToLocal() {
   localStorage.setItem("items", JSON.stringify(tasks));
@@ -32,7 +38,7 @@ function handleInput() {
   }
 
   if (tasks.length > 6) {
-    Toast("Maximum 6 allowed");
+    Toast("Maximum length reached");
     return;
   }
 
