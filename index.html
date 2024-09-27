@@ -6,8 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Taskey &mdash; Your Personal Tasks Manager</title>
     <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+
+    <!-- Font Teachers -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Teachers:ital,wght@0,400..800;1,400..800&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body>
+  <body class="font-teachers">
     <main class="h-screen bg-gray-200 flex justify-center items-center">
       <div class="card text-black bg-gray-100 w-96 shadow-xl mt-10">
         <div class="card-body">
@@ -22,6 +30,7 @@
               class="mt-2"
             />
           </h1>
+
           <!-- Add todo -->
           <label class="input input-bordered flex items-center gap-2">
             <input type="text" class="grow text-white" placeholder="Add Task" />
@@ -56,19 +65,21 @@
                 <button class="btn">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
+                    width="24"
+                    height="24"
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
                     stroke-width="2"
                     stroke-linecap="round"
                     stroke-linejoin="round"
-                    class="icon icon-tabler icons-tabler-outline icon-tabler-x text-red-500"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-square-rounded-x text-red-500"
                   >
                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                    <path d="M18 6l-12 12" />
-                    <path d="M6 6l12 12" />
+                    <path d="M10 10l4 4m0 -4l-4 4" />
+                    <path
+                      d="M12 3c7.2 0 9 1.8 9 9s-1.8 9 -9 9s-9 -1.8 -9 -9s1.8 -9 9 -9z"
+                    />
                   </svg>
                 </button>
               </li>
@@ -77,6 +88,8 @@
         </div>
       </div>
     </main>
+
+    <div class="toast toast-end" data-show-toast></div>
     <!-- Script -->
     <script type="module" src="/main.js"></script>
   </body>
