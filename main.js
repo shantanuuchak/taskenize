@@ -1,4 +1,4 @@
-// Import Styling
+// Import Styling & Components
 import "./style.css";
 import TaskList from "./components/TaskLi";
 import Toast from "./components/Toast";
@@ -9,6 +9,9 @@ const addBtn = document.querySelector("[data-add-btn]");
 const dataList = document.querySelector("[data-list-tasks]");
 
 // === Variables ===
+const ul = document.createElement("ul");
+ul.classList.add("menu", "bg-base-200", "rounded-box", "w-full", "text-white");
+
 // Get tasks from local storage
 const tasks = JSON.parse(localStorage.getItem("items")) || [];
 
@@ -28,9 +31,10 @@ function saveToLocal() {
 function renderTask(task, empty = false) {
   // Take a task object and render it on the screen as a list
   if (empty) {
-    dataList.innerHTML = "";
+    ul.innerHTML = "";
   }
-  dataList.appendChild(TaskList(task));
+  ul.appendChild(TaskList(task));
+  dataList.appendChild(ul);
 }
 
 function handleInput() {
