@@ -47,16 +47,17 @@
             MARK: Add todo
           -->
           <label
-            class="input input-bordered flex items-center gap-2 text-white"
+            class="input input-bordered flex items-center gap-3 text-white"
           >
             <input
               type="text"
               class="grow text-white"
               placeholder="Add Task"
               autofocus
+              data-input-text
             />
-            <i class="ti ti-plus cursor-pointer"></i>
-            <i class="ti ti-x cursor-pointer"></i>
+            <i class="ti ti-plus cursor-pointer" data-btn-add></i>
+            <i class="ti ti-x cursor-pointer" data-btn-clearlocal></i>
           </label>
 
           <!--
@@ -99,11 +100,6 @@
     <!-- 
     MARK: Toast
     -->
-    <div class="toast toast-top toast-start">
-      <div class="alert alert-info">
-        <span>New mail arrived.</span>
-      </div>
-    </div>
 
     <!-- Script -->
     <script type="module" src="/main.js"></script>
