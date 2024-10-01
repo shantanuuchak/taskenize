@@ -14,6 +14,12 @@
       href="https://fonts.googleapis.com/css2?family=Teachers:ital,wght@0,400..800;1,400..800&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Tabler Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"
+    />
   </head>
   <body class="font-teachers">
     <main
@@ -34,79 +40,71 @@
           <!-- Title -->
           <h1 class="card-title text-4xl pb-3 flex items-center">
             Taskey
-            <img
-              width="32"
-              height="32"
-              src="https://img.icons8.com/led/32/task.png"
-              alt="task"
-              class="mt-2"
-            />
+            <i class="ti ti-clipboard-copy"></i>
           </h1>
 
-          <!-- Add todo -->
-          <label class="input input-bordered flex items-center gap-2">
+          <!-- 
+            MARK: Add todo
+          -->
+          <label
+            class="input input-bordered flex items-center gap-2 text-white"
+          >
             <input
               type="text"
               class="grow text-white"
               placeholder="Add Task"
               autofocus
             />
-            <svg
-              class="h-4 w-4 opacity-100 text-white cursor-pointer"
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="icon icon-tabler icons-tabler-outline icon-tabler-plus"
-              data-add-btn
-            >
-              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-              <path d="M12 5l0 14" />
-              <path d="M5 12l14 0" />
-            </svg>
+            <i class="ti ti-plus cursor-pointer"></i>
+            <i class="ti ti-x cursor-pointer"></i>
           </label>
 
-          <!-- Show todos -->
+          <!--
+            TODO: Todos
+          -->
           <div class="card-actions" data-list-tasks>
-            <!-- <ul
+            <ul
               class="menu bg-base-200 rounded-box w-full text-white"
               data-list-tasks
             >
               <li class="flex flex-row items-center">
                 <p>Placeholder task #1</p>
                 <button class="btn">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="icon icon-tabler icons-tabler-outline icon-tabler-square-rounded-x text-red-500"
-                  >
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                    <path d="M10 10l4 4m0 -4l-4 4" />
-                    <path
-                      d="M12 3c7.2 0 9 1.8 9 9s-1.8 9 -9 9s-9 -1.8 -9 -9s1.8 -9 9 -9z"
-                    />
-                  </svg>
+                  <i class="ti ti-square-rounded-x text-red-500"></i>
                 </button>
               </li>
-            </ul> -->
+            </ul>
           </div>
         </div>
       </div>
     </main>
 
-    <div class="toast toast-end" data-show-toast></div>
+    <!-- 
+      MARK: Modal
+    -->
+    <!-- my_modal_1.showModal() -->
+    <dialog id="my_modal_1" class="modal">
+      <div class="modal-box">
+        <h3 class="text-lg font-bold">Hello!</h3>
+        <p class="py-4">Press ESC key or click the button below to close</p>
+        <div class="modal-action">
+          <form method="dialog">
+            <!-- if there is a button in form, it will close the modal -->
+            <button class="btn">Close</button>
+          </form>
+        </div>
+      </div>
+    </dialog>
+
+    <!-- 
+    MARK: Toast
+    -->
+    <div class="toast toast-top toast-start">
+      <div class="alert alert-info">
+        <span>New mail arrived.</span>
+      </div>
+    </div>
+
     <!-- Script -->
     <script type="module" src="/main.js"></script>
   </body>
