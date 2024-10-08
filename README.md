@@ -6,3 +6,7 @@ A modern native task tracker.
 
 - Stores tasks in local storage
 - Shows toast notifications
+
+# Icon Pack
+
+https://icons8.com/icon/OOhuW8rMFXcL/alien-monster
