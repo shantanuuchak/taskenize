@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Taskey</title>
     <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
-    <link rel="stylesheet" href="style.css" />
   </head>
   <body class="font-inter">
     <!-- 
@@ -16,6 +15,32 @@
         <a class="btn btn-ghost text-xl"
           ><img class="w-8" src="favicon.png" alt="image" /> Taskey</a
         >
+      </div>
+      <div class="flex-none">
+        <button class="btn btn-square btn-ghost">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="icon icon-tabler icons-tabler-outline icon-tabler-sun-moon"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M9.173 14.83a4 4 0 1 1 5.657 -5.657" />
+            <path
+              d="M11.294 12.707l.174 .247a7.5 7.5 0 0 0 8.845 2.492a9 9 0 0 1 -14.671 2.914"
+            />
+            <path d="M3 12h1" />
+            <path d="M12 3v1" />
+            <path d="M5.6 5.6l.7 .7" />
+            <path d="M3 21l18 -18" />
+          </svg>
+        </button>
       </div>
       <div class="flex-none">
         <a
@@ -39,5 +64,31 @@
         </a>
       </div>
     </div>
+
+    <!-- 
+        MARK: Main
+    -->
+    <main class="h-screen flex justify-center items-center px-3 sm:px-0">
+      <div class="card bg-base-100 w-80 sm:w-96 shadow-xl">
+        <figure>
+          <img
+            src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+            alt="Shoes"
+          />
+        </figure>
+        <div class="card-body">
+          <h2 class="card-title">Shoes!</h2>
+          <p>If a dog chews shoes whose shoes does he choose?</p>
+          <div class="card-actions justify-end">
+            <button class="btn btn-primary">Buy Now</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- 
+        MARK: Footer
+    -->
+    <script src="js/main.js" type="module"></script>
   </body>
 </html>
