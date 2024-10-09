@@ -7,6 +7,6 @@ A modern native task tracker built using Daisey UI
 - Stores tasks in local storage
 - Shows toast notifications
 
-# Icon Pack
+## Icon Pack
 
 https://icons8.com/icon/OOhuW8rMFXcL/alien-monster
