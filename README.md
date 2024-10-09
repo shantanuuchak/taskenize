@@ -1,6 +1,6 @@
 # Taskey
 
-A modern native task tracker.
+A modern native task tracker built using Daisey UI
 
 ## Features
 
