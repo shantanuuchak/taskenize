@@ -5,63 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Taskey</title>
     <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+
+    <!-- Tabler Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"
+    />
   </head>
   <body class="font-inter">
     <!-- 
         MARK: Navbar
     -->
-    <div class="navbar bg-base-100">
+    <div class="navbar">
+      <!-- Logo -->
       <div class="flex-1">
         <a class="btn btn-ghost text-xl"
-          ><img class="w-8" src="favicon.png" alt="image" /> Taskey</a
+          ><img class="w-8" src="favicon.png" alt="image" />Taskey</a
         >
       </div>
-      <div class="flex-none">
-        <button class="btn btn-square btn-ghost">
+
+      <!-- Toggle theme -->
+      <div class="flex-none mr-4">
+        <label class="swap swap-rotate">
+          <!-- this hidden checkbox controls the state -->
+          <input type="checkbox" />
+
+          <!-- sun icon -->
           <svg
+            class="swap-on h-6 w-6 fill-current"
             xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
             viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="icon icon-tabler icons-tabler-outline icon-tabler-sun-moon"
           >
-            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-            <path d="M9.173 14.83a4 4 0 1 1 5.657 -5.657" />
             <path
-              d="M11.294 12.707l.174 .247a7.5 7.5 0 0 0 8.845 2.492a9 9 0 0 1 -14.671 2.914"
+              d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z"
             />
-            <path d="M3 12h1" />
-            <path d="M12 3v1" />
-            <path d="M5.6 5.6l.7 .7" />
-            <path d="M3 21l18 -18" />
           </svg>
+
+          <!-- moon icon -->
+          <svg
+            class="swap-off h-6 w-6 fill-current"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z"
+            />
+          </svg>
+        </label>
+      </div>
+
+      <!-- Github -->
+      <div class="flex-none">
+        <button class="btn btn-square btn-ghost text-2xl">
+          <i class="ti ti-brand-github"></i>
         </button>
-      </div>
-      <div class="flex-none">
-        <a
-          class="btn btn-square btn-ghost"
-          target="_blank"
-          href="https://github.com/shantanuuchak/taskey"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="currentColor"
-            class="icon icon-tabler icons-tabler-filled icon-tabler-brand-github"
-          >
-            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-            <path
-              d="M5.315 2.1c.791 -.113 1.9 .145 3.333 .966l.272 .161l.16 .1l.397 -.083a13.3 13.3 0 0 1 4.59 -.08l.456 .08l.396 .083l.161 -.1c1.385 -.84 2.487 -1.17 3.322 -1.148l.164 .008l.147 .017l.076 .014l.05 .011l.144 .047a1 1 0 0 1 .53 .514a5.2 5.2 0 0 1 .397 2.91l-.047 .267l-.046 .196l.123 .163c.574 .795 .93 1.728 1.03 2.707l.023 .295l.007 .272c0 3.855 -1.659 5.883 -4.644 6.68l-.245 .061l-.132 .029l.014 .161l.008 .157l.004 .365l-.002 .213l-.003 3.834a1 1 0 0 1 -.883 .993l-.117 .007h-6a1 1 0 0 1 -.993 -.883l-.007 -.117v-.734c-1.818 .26 -3.03 -.424 -4.11 -1.878l-.535 -.766c-.28 -.396 -.455 -.579 -.589 -.644l-.048 -.019a1 1 0 0 1 .564 -1.918c.642 .188 1.074 .568 1.57 1.239l.538 .769c.76 1.079 1.36 1.459 2.609 1.191l.001 -.678l-.018 -.168a5.03 5.03 0 0 1 -.021 -.824l.017 -.185l.019 -.12l-.108 -.024c-2.976 -.71 -4.703 -2.573 -4.875 -6.139l-.01 -.31l-.004 -.292a5.6 5.6 0 0 1 .908 -3.051l.152 -.222l.122 -.163l-.045 -.196a5.2 5.2 0 0 1 .145 -2.642l.1 -.282l.106 -.253a1 1 0 0 1 .529 -.514l.144 -.047l.154 -.03z"
-            />
-          </svg>
-        </a>
       </div>
     </div>
 
@@ -74,10 +71,13 @@
           <img src="pattern.jpeg" alt="Shoes" />
         </figure>
         <div class="card-body">
-          <ul class="menu bg-base-200 rounded-box">
-            <li class="flex justify-between">Item 1 X</li>
-            <li><a>Item 2</a></li>
-            <li><a>Item 3</a></li>
+          <ul class="menu bg-base-200 rounded-box p-4 flex">
+            <li class="flex flex-row justify-between items-center">
+              <a href="#">Iron the clothes</a>
+              <button class="btn btn-sm text-2xl">
+                <i class="ti ti-square-rounded-minus"></i>
+              </button>
+            </li>
           </ul>
         </div>
       </div>
