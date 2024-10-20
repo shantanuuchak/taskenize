@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        Figtree: ["Figree", "sans-serif"],
+        figtree: ["Figree", "sans-serif"],
       },
     },
   },
