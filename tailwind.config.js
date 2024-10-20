@@ -5,6 +5,7 @@ export default {
     extend: {
       fontFamily: {
         figtree: ["Figree", "sans-serif"],
+        tanpearl: ["TanPearl", "serif"],
       },
     },
   },
