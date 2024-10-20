@@ -20,17 +20,22 @@ function renderTasks() {
   listInputEl.appendChild(fragement);
 }
 
-listInputEl.addEventListener("click", () => {
-  console.log(`an input was clicked wow!`);
+listInputEl.addEventListener("click", (e) => {
+  if (e.target.tagName === "INPUT") {
+    console.log("Bhai dot mein click hua hai");
+    console.log(e.target.textContent);
+  }
 });
 
 formEl.addEventListener("submit", (e) => {
   e.preventDefault(); // Prevent form to refresh
+  if (!inputEl.value) return; // If input is empty
 
-  if (!inputEl.value) return;
-
+  //   Get current value, push to state, make input empty
   const currInput = inputEl.value.trim();
-  state.push({ id: state.length, value: currInput, isMarked: false });
+  state.push({ id: state.length, value: currInput, isMarked: true });
   inputEl.value = "";
+
+  //   Render new tasks
   renderTasks();
 });

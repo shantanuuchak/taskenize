@@ -3,7 +3,8 @@ export default function (text, isCompleted) {
   label.classList.add(
     "label",
     "cursor-pointer",
-    isCompleted && "bg-stone-200 rounded-lg"
+    isCompleted && "bg-stone-200",
+    isCompleted && "rounded-lg"
   );
   label.innerHTML = `
     <span class="label-text">${text}</span>
