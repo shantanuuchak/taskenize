@@ -9,6 +9,7 @@ const listInputEl = document.querySelector("[data-list-tasks]");
 // State
 const state = [];
 
+// Rendering tasks list
 function renderTasks() {
   listInputEl.innerHTML = "";
 
@@ -23,10 +24,11 @@ function renderTasks() {
 listInputEl.addEventListener("click", (e) => {
   if (e.target.tagName === "INPUT") {
     console.log("Bhai dot mein click hua hai");
-    console.log(e.target.textContent);
+    console.log(e);
   }
 });
 
+// Form Submit
 formEl.addEventListener("submit", (e) => {
   e.preventDefault(); // Prevent form to refresh
   if (!inputEl.value) return; // If input is empty

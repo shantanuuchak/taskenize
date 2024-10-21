@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
       rel="stylesheet"
     />
 
@@ -26,7 +26,7 @@
     -->
     <div class="navbar bg-base-100">
       <div class="flex-1">
-        <a class="btn btn-ghost text-xl font-medium font-tanpearl">Taskenize</a>
+        <a class="btn btn-ghost text-xl font-medium font-libre">Taskenize</a>
       </div>
       <div class="flex-none">
         <a class="btn btn-square btn-ghost" href="#" target="_blank">
@@ -39,12 +39,12 @@
       MARK: 
     -->
     <main class="grid place-items-center min-h-screen mb-20">
-      <div class="card bg-zinc-100 w-80 mx-auto shadow-xl">
+      <div class="card bg-zinc-100 w-64 md:w-72 lg:w-96 mx-auto shadow-xl">
         <figure>
           <img src="pattern.jpg" alt="Pattern X" />
         </figure>
         <div class="card-body">
-          <h1 class="card-title mb-3 font-tanpearl">
+          <h1 class="card-title mb-3 font-libre">
             Taskenize &mdash; Organize Your Thoughts
           </h1>
           <div class="form-control gap-4">
@@ -61,17 +61,7 @@
             </form>
 
             <!-- List of tasks go here -->
-            <section class="px-2 grid gap-1" data-list-tasks>
-              <label class="label cursor-pointer">
-                <span class="label-text">Implement the logic</span>
-                <input type="checkbox" class="checkbox" />
-              </label>
-
-              <label class="label cursor-pointer bg-stone-200 rounded-lg">
-                <span class="label-text">Integrate daisyUI</span>
-                <input type="checkbox" checked class="checkbox" />
-              </label>
-            </section>
+            <section class="px-2 grid gap-1" data-list-tasks></section>
           </div>
         </div>
       </div>
