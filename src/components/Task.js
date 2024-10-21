@@ -1,4 +1,4 @@
-export default function (text, isCompleted) {
+export default function (text, isCompleted, id) {
   const label = document.createElement("label");
   label.classList.add(
     "label",
@@ -8,7 +8,9 @@ export default function (text, isCompleted) {
   );
   label.innerHTML = `
     <span class="label-text">${text}</span>
-    <input type="checkbox" class="checkbox" ${isCompleted && "checked"} />
+    <input type="checkbox" id="${id}" class="checkbox" ${
+    isCompleted && "checked"
+  } />
   `;
   return label;
 }
