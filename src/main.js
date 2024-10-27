@@ -56,7 +56,7 @@ formEl.addEventListener("submit", (e) => {
 
   //   Get current value, push to state, make input empty
   const currInput = _.startCase(_.lowerCase(inputEl.value.trim()));
-  state.push({ id: state.length, value: currInput, isMarked: false });
+  state.unshift({ id: state.length, value: currInput, isMarked: false });
   inputEl.value = "";
 
   //   Render new tasks
