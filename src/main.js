@@ -1,5 +1,11 @@
-import Task from "./components/Task";
 import "./index.css";
+
+// Packages
+import _ from "loadsh";
+import { getItem, setItem } from "localforage";
+
+// Components
+import Task from "./components/Task";
 
 // DOM Targetting
 const formEl = document.querySelector("form");
@@ -28,27 +34,28 @@ function markComplete(id) {
 function renderTasks() {
   listInputEl.innerHTML = "";
 
-  const fragement = document.createDocumentFragment();
-  state.forEach((task) =>
-    fragement.appendChild(Task(task.value, task.isMarked, task.id))
+  // Performance
+  const frag = document.createDocumentFragment();
+  state.forEach(({ value, isMarked, id }) =>
+    frag.appendChild(Task(value, isMarked, id))
   );
 
-  listInputEl.appendChild(fragement);
+  listInputEl.appendChild(frag);
 }
 
 listInputEl.addEventListener("click", (e) => {
   if (e.target.tagName === "INPUT") {
-    markComplete(+e.target.id);
+    markComplete(parseInt(e.target.id));
   }
 });
 
 // Form Submit
 formEl.addEventListener("submit", (e) => {
   e.preventDefault(); // Prevent form to refresh
-  if (!inputEl.value) return; // If input is empty
+  if (!inputEl.value) return; // Guard Clause
 
   //   Get current value, push to state, make input empty
-  const currInput = inputEl.value.trim();
+  const currInput = _.startCase(_.lowerCase(inputEl.value.trim()));
   state.push({ id: state.length, value: currInput, isMarked: false });
   inputEl.value = "";
 

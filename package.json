@@ -14,5 +14,9 @@
     "postcss": "^8.4.47",
     "tailwindcss": "^3.4.14",
     "vite": "^5.4.8"
+  },
+  "dependencies": {
+    "loadsh": "^0.0.4",
+    "localforage": "^1.10.0"
   }
 }
