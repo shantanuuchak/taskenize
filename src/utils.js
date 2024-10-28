@@ -1,5 +1,6 @@
-import _ from "loadsh";
+import startCase from "loadsh/startCase";
+import lowerCase from "loadsh/lowerCase";
 
 export function titleCase(str) {
-  return _.startCase(_.lowerCase(str));
+  return startCase(lowerCase(str));
 }
