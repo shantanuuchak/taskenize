@@ -1,8 +1,7 @@
 import "./index.css";
 
 // Packages
-import _ from "loadsh";
-import { getItem, setItem } from "localforage";
+import { titleCase } from "./utils";
 
 // Components
 import Task from "./components/Task";
@@ -55,7 +54,7 @@ formEl.addEventListener("submit", (e) => {
   if (!inputEl.value) return; // Guard Clause
 
   //   Get current value, push to state, make input empty
-  const currInput = _.startCase(_.lowerCase(inputEl.value.trim()));
+  const currInput = titleCase(inputEl.value);
   state.unshift({ id: state.length, value: currInput, isMarked: false });
   inputEl.value = "";
 
