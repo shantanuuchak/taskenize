@@ -64,6 +64,14 @@ formEl.addEventListener("submit", (e) => {
   e.preventDefault(); // Prevent form to refresh
   if (!inputEl.value) return; // Guard Clause
 
+  if (inputEl.value === ":clearall") {
+    state.length = 0;
+    localforage.setItem("tasks", []);
+    renderTasks();
+    inputEl.value = "";
+    return;
+  }
+
   //   Get current value, push to state, make input empty
   const currInput = titleCase(inputEl.value);
   state.unshift({ id: randomID(), value: currInput, isMarked: false });
