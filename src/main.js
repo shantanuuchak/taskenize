@@ -1,7 +1,7 @@
 import "./index.css";
 
 // Packages
-import { titleCase } from "./utils";
+import { titleCase, randomID } from "./utils";
 
 // Components
 import Task from "./components/Task";
@@ -55,7 +55,7 @@ formEl.addEventListener("submit", (e) => {
 
   //   Get current value, push to state, make input empty
   const currInput = titleCase(inputEl.value);
-  state.unshift({ id: state.length, value: currInput, isMarked: false });
+  state.unshift({ id: randomID, value: currInput, isMarked: false });
   inputEl.value = "";
 
   //   Render new tasks
