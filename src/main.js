@@ -2,6 +2,7 @@ import "./index.css";
 
 // Packages
 import { titleCase, randomID } from "./utils";
+import localforage from "localforage";
 
 // Components
 import Task from "./components/Task";
@@ -12,9 +13,20 @@ const inputEl = document.querySelector("[data-input-task]");
 const listInputEl = document.querySelector("[data-list-tasks]");
 
 // State
+localforage.setDriver(localforage.LOCALSTORAGE);
 let state = [];
 
-function markComplete(id) {
+localforage.getItem("tasks").then((data) => {
+  if (!data) return;
+
+  state = data;
+  renderTasks();
+});
+
+console.log(state);
+setTimeout(() => console.log(state), 1000);
+
+function toggleComplete(id) {
   state = state.map((task) => {
     if (task.id === id) {
       return { ...task, isMarked: !task.isMarked };
@@ -24,8 +36,7 @@ function markComplete(id) {
   });
 
   state.sort((a, b) => a.isMarked - b.isMarked);
-
-  renderTasks();
+  localforage.setItem("tasks", state);
 }
 
 // Rendering tasks list
@@ -43,7 +54,8 @@ function renderTasks() {
 
 listInputEl.addEventListener("click", (e) => {
   if (e.target.tagName === "INPUT") {
-    markComplete(e.target.id);
+    toggleComplete(e.target.id);
+    renderTasks();
   }
 });
 
@@ -56,9 +68,9 @@ formEl.addEventListener("submit", (e) => {
   const currInput = titleCase(inputEl.value);
   state.unshift({ id: randomID(), value: currInput, isMarked: false });
 
-  console.log(state);
+  localforage.setItem("tasks", state);
 
-  inputEl.value = "";
+  inputEl.value = ""; // Clean input field
 
   //   Render new tasks
   renderTasks();
