@@ -16,7 +16,6 @@ let state = [];
 
 function markComplete(id) {
   state = state.map((task) => {
-    console.log(task.value);
     if (task.id === id) {
       return { ...task, isMarked: !task.isMarked };
     }
@@ -44,7 +43,7 @@ function renderTasks() {
 
 listInputEl.addEventListener("click", (e) => {
   if (e.target.tagName === "INPUT") {
-    markComplete(parseInt(e.target.id));
+    markComplete(e.target.id);
   }
 });
 
@@ -55,7 +54,10 @@ formEl.addEventListener("submit", (e) => {
 
   //   Get current value, push to state, make input empty
   const currInput = titleCase(inputEl.value);
-  state.unshift({ id: randomID, value: currInput, isMarked: false });
+  state.unshift({ id: randomID(), value: currInput, isMarked: false });
+
+  console.log(state);
+
   inputEl.value = "";
 
   //   Render new tasks
